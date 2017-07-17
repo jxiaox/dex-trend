@@ -38,11 +38,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/v-comp/v-trend.git"
+    "url": "https://github.com/jxiaox/dex-trend.git"
   },
   "bugs": {
-    "url": "https://github.com/v-comp/v-trend/issues"
+    "url": "https://github.com/jxiaox/dex-trend/issues"
   },
-  "homepage": "https://github.com/v-comp/v-trend#readme",
+  "homepage": "https://github.com/jxiaox/dex-trend#readme",
   "author": "angusfu1126@qq.com"
 }

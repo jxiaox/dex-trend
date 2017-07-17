@@ -12,7 +12,7 @@ svg(
       y2="0"
     )
       stop(
-        v-for="stop in stops",
+        v-for="(stop,index) in stops" :key="index",
         :offset="stop.offset",
         :stop-color="stop.color"
       )

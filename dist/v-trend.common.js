@@ -52,7 +52,7 @@ var toFixed = function (n, d) {
   return +n.toFixed(d);
 };
 
-var VTrendComp$1 = { template: "<svg :viewBox=\"viewBox\" style=\"width:100%;height:100%\"><defs><linearGradient :id=\"gradId\" x1=\"0\" x2=\"0\" y1=\"1\" y2=\"0\"><stop v-for=\"stop in stops\" :offset=\"stop.offset\" :stop-color=\"stop.color\"></stop></linearGradient><mask :id=\"maskId\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"><polyline v-if=\"!isSmooth\" :points=\"path\" :stroke-width=\"strokeWidth\" fill=\"transparent\" stroke=\"#8cc665\" ref=\"path\"></polyline><path v-if=\"isSmooth\" :d=\"path\" :stroke-width=\"strokeWidth\" fill=\"transparent\" stroke=\"#8cc665\" ref=\"path\"></path></mask></defs><g><rect :style=\"rectStyle\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"></rect></g></svg>",
+var VTrendComp$1 = { template: "<svg :viewBox=\"viewBox\" style=\"width:100%;height:100%\"><defs><linearGradient :id=\"gradId\" x1=\"0\" x2=\"0\" y1=\"1\" y2=\"0\"><stop v-for=\"(stop,index) in stops\" :key=\"index\" :offset=\"stop.offset\" :stop-color=\"stop.color\"></stop></linearGradient><mask :id=\"maskId\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"><polyline v-if=\"!isSmooth\" :points=\"path\" :stroke-width=\"strokeWidth\" fill=\"transparent\" stroke=\"#8cc665\" ref=\"path\"></polyline><path v-if=\"isSmooth\" :d=\"path\" :stroke-width=\"strokeWidth\" fill=\"transparent\" stroke=\"#8cc665\" ref=\"path\"></path></mask></defs><g><rect :style=\"rectStyle\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"></rect></g></svg>",
   name: 'v-trend',
   props: {
     width: {
