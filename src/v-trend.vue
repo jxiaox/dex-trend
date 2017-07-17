@@ -1,8 +1,7 @@
 <template lang="pug">
 svg(
-  :width="width",
-  :height="height",
-  :viewBox="viewBox"
+  :viewBox="viewBox",
+  style="width:100%;height:100%"
 )
   defs
     linearGradient(
@@ -67,12 +66,10 @@ export default {
   name: 'v-trend',
   props: {
     width: {
-      type: Number,
-      default: 155
+      type: Number
     },
     height: {
-      type: Number,
-      default: 30
+      type: Number
     },
     strokeWidth: {
       type: Number,

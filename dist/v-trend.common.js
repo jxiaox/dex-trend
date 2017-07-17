@@ -52,16 +52,14 @@ var toFixed = function (n, d) {
   return +n.toFixed(d);
 };
 
-var VTrendComp$1 = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svg',{attrs:{"width":_vm.width,"height":_vm.height,"viewBox":_vm.viewBox}},[_c('defs',[_c('linearGradient',{attrs:{"id":_vm.gradId,"x1":"0","x2":"0","y1":"1","y2":"0"}},_vm._l((_vm.stops),function(stop){return _c('stop',{attrs:{"offset":stop.offset,"stop-color":stop.color}})})),_c('mask',{attrs:{"id":_vm.maskId,"x":"0","y":"0","width":"100%","height":"100%"}},[(!_vm.isSmooth)?_c('polyline',{ref:"path",attrs:{"points":_vm.path,"stroke-width":_vm.strokeWidth,"fill":"transparent","stroke":"#8cc665"}}):_vm._e(),(_vm.isSmooth)?_c('path',{ref:"path",attrs:{"d":_vm.path,"stroke-width":_vm.strokeWidth,"fill":"transparent","stroke":"#8cc665"}}):_vm._e()])],1),_c('g',[_c('rect',{style:(_vm.rectStyle),attrs:{"x":"0","y":"0","width":"100%","height":"100%"}})])])},staticRenderFns: [],
+var VTrendComp$1 = { template: "<svg :viewBox=\"viewBox\" style=\"width:100%;height:100%\"><defs><linearGradient :id=\"gradId\" x1=\"0\" x2=\"0\" y1=\"1\" y2=\"0\"><stop v-for=\"stop in stops\" :offset=\"stop.offset\" :stop-color=\"stop.color\"></stop></linearGradient><mask :id=\"maskId\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"><polyline v-if=\"!isSmooth\" :points=\"path\" :stroke-width=\"strokeWidth\" fill=\"transparent\" stroke=\"#8cc665\" ref=\"path\"></polyline><path v-if=\"isSmooth\" :d=\"path\" :stroke-width=\"strokeWidth\" fill=\"transparent\" stroke=\"#8cc665\" ref=\"path\"></path></mask></defs><g><rect :style=\"rectStyle\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"></rect></g></svg>",
   name: 'v-trend',
   props: {
     width: {
-      type: Number,
-      default: 155
+      type: Number
     },
     height: {
-      type: Number,
-      default: 30
+      type: Number
     },
     strokeWidth: {
       type: Number,
